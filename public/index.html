@@ -1,0 +1,91 @@
+<html>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="../../../lib.css" />
+  <link rel="stylesheet" href="../../../scaffold.css" />
+  <script src="../../../scaffold.js"></script>
+  <title>Vortex Deluxe</title>
+</header>
+
+<body>
+  <div id="loading" class="fixed">
+    <img src="loading.gif" alt="loading" />
+  </div>
+  <div id="error" class="fixed" style="display: none">
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content center;">
+      <img src="error.png" alt="error" />
+      <div style="margin-top: 8px">
+        Encountered a problem with this content.
+      </div>
+    </div>
+  </div>
+  <div id="game" style="display: none; pointer-events: all;">
+    <!-- scaffold gets inserted here -->
+  </div>
+</body>
+<footer>
+  <script>
+    scaffoldSetupBoard('normal', 'abshift');
+
+    const gameName = 'VortexXe';
+
+    function init() {
+      initTopBarButtons();
+      Lib.getConfig().autoPushStart = false;
+      var script = document.createElement('script');
+      script.setAttribute('type', 'text/javascript');
+      script.setAttribute('async', true);
+      script.setAttribute('src', gameName.toUpperCase() + '.js');
+      document.body.appendChild(script);
+    }
+    function initTopBarButtons() {
+      const elem = document.getElementById('top-bar-controls');
+      const children = [
+        Lib.createTopBarButton({
+          id: 'cancel',
+          svgSrc1: '../../../assets/cancel.svg',
+          onClick: function () { },
+          type: 'cancel',
+        }),
+        Lib.createTopBarButton({
+          id: 'toggle-sound',
+          svgSrc1: '../../../assets/sound_on.svg',
+          svgSrc2: '../../../assets/sound_off.svg',
+          onClick: Lib.toggleSound.bind(Lib),
+        }),
+        Lib.createTopBarButton({
+          id: 'toggle-controls',
+          svgSrc1: '../../../assets/controls.svg',
+          onClick: Lib.toggleButtons.bind(Lib),
+        }),
+        Lib.createTopBarButton({
+          id: 'show-help',
+          svgSrc1: '../../../assets/help.svg',
+          onClick: Lib.showHelp.bind(Lib, {
+            en: 'instructions/instructions.en.html',
+          }),
+        }),
+      ];
+      for (const child of children) {
+        elem.appendChild(child);
+      }
+    }
+    function start() {
+      Lib.enableModuleControls();
+      Lib.handleButtonDown(13);
+      setTimeout(() => {
+        Lib.handleButtonUp(13);
+      }, 1);
+    }
+    function end() {
+      Lib.disableModuleControls();
+    }
+    window.notifyHighScore = function (val) {
+      Lib.notifyGameCompleted(val);
+    };
+  </script>
+  <script type="text/javascript" src="../../../lib.js"></script>
+</footer>
+
+</html>

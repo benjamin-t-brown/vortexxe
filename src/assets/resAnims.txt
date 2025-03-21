@@ -1,0 +1,408 @@
+#
+asteroid_small
+loop
+asteroid_small_0 100
+asteroid_small_1 100
+asteroid_small_2 100
+asteroid_small_3 100
+asteroid_small_4 100
+asteroid_small_5 100
+asteroid_small_6 100
+asteroid_small_7 100
+asteroid_small_8 100
+asteroid_small_9 100
+asteroid_small_10 100
+asteroid_small_11 100
+asteroid_small_12 100
+asteroid_small_13 100
+asteroid_small_14 100
+asteroid_small_15 100
+asteroid_small_16 100
+asteroid_small_17 100
+asteroid_small_18 100
+asteroid_small_19 100
+
+#
+asteroid_medium
+loop
+asteroid_medium_0 100
+asteroid_medium_1 100
+asteroid_medium_2 100
+asteroid_medium_3 100
+asteroid_medium_4 100
+asteroid_medium_5 100
+asteroid_medium_6 100
+asteroid_medium_7 100
+asteroid_medium_8 100
+asteroid_medium_9 100
+asteroid_medium_10 100
+asteroid_medium_11 100
+asteroid_medium_12 100
+asteroid_medium_13 100
+asteroid_medium_14 100
+asteroid_medium_15 100
+asteroid_medium_16 100
+asteroid_medium_17 100
+
+#
+asteroid_large
+loop
+asteroid_large_19 100
+asteroid_large_18 100
+asteroid_large_17 100
+asteroid_large_16 100
+asteroid_large_15 100
+asteroid_large_14 100
+asteroid_large_13 100
+asteroid_large_12 100
+asteroid_large_11 100
+asteroid_large_10 100
+asteroid_large_9 100
+asteroid_large_8 100
+asteroid_large_7 100
+asteroid_large_6 100
+asteroid_large_5 100
+asteroid_large_4 100
+asteroid_large_3 100
+asteroid_large_2 100
+asteroid_large_1 100
+asteroid_large_0 100
+
+#
+asteroid_metal
+loop
+asteroid_metal_0 100
+asteroid_metal_1 100
+asteroid_metal_2 100
+asteroid_metal_3 100
+asteroid_metal_4 100
+asteroid_metal_5 100
+asteroid_metal_6 100
+asteroid_metal_7 100
+asteroid_metal_8 100
+asteroid_metal_9 100
+asteroid_metal_10 100
+asteroid_metal_11 100
+asteroid_metal_12 100
+asteroid_metal_13 100
+asteroid_metal_14 100
+asteroid_metal_15 100
+asteroid_metal_16 100
+asteroid_metal_17 100
+asteroid_metal_18 100
+asteroid_metal_19 100
+
+#
+explosion
+noloop
+explosion_0 60
+explosion_1 60
+explosion_2 60
+explosion_3 60
+explosion_4 60
+explosion_5 60
+explosion_6 60
+
+#
+explosion2
+noloop
+explosion2_0 60
+explosion2_1 60
+explosion2_2 60
+explosion2_3 60
+explosion2_4 60
+explosion2_5 60
+explosion2_6 60
+
+#
+player_bullet
+loop
+player_bullet_0 75
+player_bullet_1 75
+player_bullet_2 75
+player_bullet_3 75
+player_bullet_4 75
+player_bullet_5 75
+player_bullet_6 75
+
+#
+player_bullet_big
+loop
+player_bullet_big_0 100
+player_bullet_big_1 100
+player_bullet_big_2 100
+player_bullet_big_3 100
+player_bullet_big_4 100
+player_bullet_big_5 100
+player_bullet_big_6 100
+player_bullet_big_7 100
+player_bullet_big_8 100
+player_bullet_big_9 100
+player_bullet_big_10 100
+player_bullet_big_11 100
+player_bullet_big_12 100
+player_bullet_big_13 100
+player_bullet_big_14 100
+player_bullet_big_15 100
+player_bullet_big_16 100
+player_bullet_big_17 100
+player_bullet_big_18 100
+player_bullet_big_19 100
+
+#
+player_shield
+loop
+player_shield_0 100
+player_shield_1 100
+
+#
+player_invincible
+loop
+player_shield_2 100
+player_shield_3 100
+
+#
+heart
+loop
+heart_0 100
+heart_1 100
+heart_2 100
+heart_3 100
+heart_4 100
+heart_5 100
+heart_6 100
+heart_7 100
+heart_8 100
+heart_9 100
+heart_10 100
+heart_11 100
+heart_12 100
+heart_13 100
+heart_14 100
+heart_15 100
+heart_16 100
+heart_17 100
+heart_18 100
+heart_19 100
+
+#
+candy
+loop
+candy_0 100
+candy_1 100
+candy_2 100
+candy_3 100
+candy_4 100
+candy_5 100
+candy_6 100
+candy_7 100
+candy_8 100
+candy_9 100
+candy_10 100
+candy_11 100
+candy_12 100
+candy_13 100
+candy_14 100
+candy_15 100
+candy_16 100
+candy_17 100
+candy_18 100
+candy_19 100
+
+#
+star
+loop
+star_0 100
+star_1 100
+star_2 100
+star_3 100
+star_4 100
+star_5 100
+star_6 100
+star_7 100
+star_8 100
+star_9 100
+star_10 100
+star_11 100
+star_12 100
+star_13 100
+star_14 100
+star_15 100
+star_16 100
+star_17 100
+star_18 100
+star_19 100
+
+#
+no
+loop
+no_0 100
+no_1 100
+no_2 100
+no_3 100
+no_4 100
+no_5 100
+no_6 50
+no_7 50
+no_8 50
+no_9 50
+no_10 50
+no_11 50
+no_12 50
+no_13 50
+no_14 50
+no_15 50
+no_16 50
+no_17 50
+no_18 50
+no_19 50
+
+#
+capsule
+loop
+capsule_0 100
+capsule_1 100
+capsule_2 100
+capsule_3 100
+capsule_4 100
+capsule_5 100
+capsule_6 100
+capsule_7 100
+capsule_8 100
+capsule_9 100
+capsule_10 100
+capsule_11 100
+capsule_12 100
+capsule_13 100
+capsule_14 100
+capsule_15 100
+capsule_16 100
+capsule_17 100
+capsule_18 100
+capsule_19 100
+
+#
+capsule_shatter
+noloop
+capsule_shatter_0 50
+capsule_shatter_1 50
+capsule_shatter_2 50
+capsule_shatter_3 50
+capsule_shatter_4 50
+capsule_shatter_5 50
+capsule_shatter_6 50
+capsule_shatter_7 50
+capsule_shatter_8 50
+capsule_shatter_9 50
+capsule_shatter_10 50
+capsule_shatter_11 50
+capsule_shatter_12 50
+capsule_shatter_13 50
+
+#
+shooting_star
+loop
+shooting_star_0 100
+shooting_star_1 100
+shooting_star_2 100
+shooting_star_3 100
+shooting_star_4 100
+shooting_star_5 100
+shooting_star_6 100
+shooting_star_7 100
+shooting_star_8 100
+shooting_star_9 100
+shooting_star_10 100
+shooting_star_11 100
+shooting_star_12 100
+shooting_star_13 100
+shooting_star_14 100
+shooting_star_15 100
+shooting_star_16 100
+shooting_star_17 100
+shooting_star_18 100
+shooting_star_19 100
+
+#
+bonus0
+loop
+bonus_circles_0 100
+
+#
+bonus1
+loop
+bonus_circles_1 100
+
+#
+bonus2
+loop
+bonus_circles_2 100
+
+#
+bonus3
+loop
+bonus_circles_3 100
+
+#
+enemy_ship
+loop
+enemy_ship_0 60
+enemy_ship_1 60
+enemy_ship_2 60
+enemy_ship_3 60
+enemy_ship_4 60
+enemy_ship_5 60
+enemy_ship_6 60
+enemy_ship_7 60
+enemy_ship_8 60
+enemy_ship_9 60
+enemy_ship_10 60
+enemy_ship_11 60
+enemy_ship_12 60
+enemy_ship_13 60
+enemy_ship_14 60
+enemy_ship_15 60
+enemy_ship_16 60
+enemy_ship_17 60
+enemy_ship_18 60
+enemy_ship_19 60
+
+#
+enemy_bullet
+loop
+enemy_bullet_0 75
+enemy_bullet_1 75
+enemy_bullet_2 75
+enemy_bullet_3 75
+enemy_bullet_4 75
+enemy_bullet_5 75
+enemy_bullet_6 75
+
+#
+mine
+loop
+mine_0 100
+mine_1 100
+mine_2 100
+mine_3 100
+mine_4 100
+mine_5 100
+mine_6 100
+mine_7 100
+mine_8 100
+mine_9 100
+mine_10 100
+mine_11 100
+mine_12 100
+mine_13 100
+mine_14 100
+mine_15 100
+mine_16 100
+mine_17 100
+mine_18 100
+mine_19 100
+
+#
+boost
+noloop
+boost_0 200

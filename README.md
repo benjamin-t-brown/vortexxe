@@ -2,7 +2,7 @@
 
 Deluxe version!
 
-A twist on the arcade game Asteroids, inspired by the old mac game Maelstrom.
+A twist on the arcade game Asteroids, inspired by the old mac game [Maelstrom](https://www.libsdl.org/projects/Maelstrom/).
 
 The web version of this game is available here: https://benjamin-t-brown.github.io/vortexxe/
 

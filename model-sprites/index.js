@@ -102,7 +102,6 @@ class App {
     controls.update();
 
     this.scene = new THREE.Scene();
-    // this.scene.background = new THREE.Color('transparent');
 
     {
       const planeSize = 40;
@@ -154,8 +153,6 @@ class App {
         const root = loadedModel.scene;
         this.scene.add(root);
         this.model = root;
-        // root.rotation.set(59, 20, 28);
-        // root.rotation.set(0, 0, 2.1);
 
         const box = new THREE.Box3().setFromObject(root);
         let boxSize = (this.boxSize = box
@@ -163,6 +160,7 @@ class App {
           .length());
         const boxCenter = (this.boxCenter = box.getCenter(new THREE.Vector3()));
 
+        // DEBUG values...
         // boxSize = this.boxSize = 71.30918594402827;
         // this.boxCenter.set(0, 0.8777482279544735, 2.5000002179639544);
 
@@ -360,11 +358,6 @@ class App {
       const dt = now - prevNow;
       const frameMult = dt / sixtyFpsMs;
       prevNow = now;
-      // ctr++;
-      // if (ctr === 100) {
-      //   ctr = 0;
-      //   console.log('FRAME MULT', frameMult, dt, 1000 / dt);
-      // }
 
       if (this.animation) {
         this.animation.update();
@@ -372,11 +365,6 @@ class App {
         const animCanvas = document.getElementById('cc');
         const ctx = animCanvas.getContext('2d');
         ctx.clearRect(0, 0, animCanvas.width, animCanvas.height);
-        // ctr++;
-        // if (ctr === 10) {
-        //   console.log('SPRITE', this.animation.getSprite());
-        //   ctr = 0;
-        // }
         if (sprite) {
           const w = sprite.width * this.spriteScale;
           const h = sprite.height * this.spriteScale;

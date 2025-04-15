@@ -65,7 +65,7 @@ apt install\
 
 ```
 brew install gcc@13
-brew install brew install sdl2 sdl2_image sdl2_mixer sdl2_ttf
+brew install sdl2 sdl2_image sdl2_mixer sdl2_ttf
 
 # additional development tools
 python3 -m pip install --upgrade setuptools

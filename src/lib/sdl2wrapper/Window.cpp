@@ -154,6 +154,7 @@ Window::Window()
       deltaTime(0),
       globalAlpha(255),
       colorkey(0) {
+  // Window::instanceCount++;
   firstLoop = true;
   Window::soundEnabled = true;
   Window::globalWindow = this;
@@ -219,6 +220,8 @@ void Window::createWindow(const std::string& title,
                           const int h,
                           const int xPos,
                           const int yPos) {
+  // SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO | SDL_INIT_EVENTS |
+  //          SDL_INIT_GAMECONTROLLER);
   SDL_Init(SDL_INIT_TIMER | SDL_INIT_AUDIO | SDL_INIT_VIDEO |
            SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER | SDL_INIT_EVENTS);
   TTF_Init();
@@ -278,6 +281,20 @@ void Window::createWindow(const std::string& title,
 
   Logger().printf("[SDL] Create renderer\n");
 #ifdef __EMSCRIPTEN__
+  EM_ASM({
+    if (!FS.analyzePath('/sdl2wdata').exists) {
+      FS.mkdir('/sdl2wdata');
+    }
+    FS.mount(IDBFS, {}, '/sdl2wdata');
+    FS.syncfs(
+        true, function(err) {
+          if (err)
+            console.error("Initial FS sync error:", err);
+          else
+            console.log("Initial FS sync complete.");
+        });
+  });
+
   renderer = std::unique_ptr<SDL_Renderer, SDL_Deleter>(
       SDL_CreateRenderer(window.get(),
                          -1,
@@ -289,13 +306,13 @@ void Window::createWindow(const std::string& title,
       SDL_CreateRenderer(window.get(), -1, SDL_RENDERER_ACCELERATED),
       SDL_Deleter());
   SDL_RenderSetScale(renderer.get(), 1.0, (float)width / (float)height);
+  useIntermediateRenderTarget = true;
   renderRotationAngle = -90.0;
 #else
   renderer = std::unique_ptr<SDL_Renderer, SDL_Deleter>(
       SDL_CreateRenderer(window.get(),
                          -1,
-                         SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC |
-                             SDL_RENDERER_TARGETTEXTURE),
+                         SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC),
       SDL_Deleter());
 #endif
   useIntermediateRenderTarget = true;
@@ -308,7 +325,7 @@ void Window::createWindow(const std::string& title,
         std::string(SDL_GetError()));
     throw std::runtime_error(SDL2_WRAPPER_WINDOW_ERR);
   }
-  SDL_SetRenderDrawColor(renderer.get(), 0x11, 0x11, 0x11, 0xFF);
+  SDL_SetRenderDrawColor(renderer.get(), 0x11, 0x11, 0xFF, 0xFF);
 
   SDL_SetRenderTarget(renderer.get(),
                       useIntermediateRenderTarget ? intermediate : nullptr);
@@ -746,8 +763,6 @@ void Window::renderLoop() {
 #else
     else if (e.type == SDL_KEYDOWN) {
       if (isInputEnabled) {
-        // Logger().get() << "Key down: " << e.key.keysym.sym << ":"
-        //                << e.key.keysym.scancode << Logger::endl;
         events.keydown(e.key.keysym.sym);
       }
     } else if (e.type == SDL_KEYUP) {

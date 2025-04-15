@@ -45,6 +45,7 @@ public:
   static void loadLanguage(const std::string& lang,
                            const std::string& langFile);
   static void setLanguage(const std::string& lang);
+  static bool isEnabled();
   static const std::unordered_map<LOCSTR_TYPE, std::string>& getStrings();
   static std::string trans(const LOCSTR_TYPE& id);
 };

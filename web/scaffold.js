@@ -122,13 +122,13 @@ const controlsButtonsAbShift = `
       ontouchstart="${buttonCallbackStrings.Shift.down}"
       onmouseup="${buttonCallbackStrings.Shift.up}"
       ontouchend="${buttonCallbackStrings.Shift.up}"
-      >X</button>
+      >Shift</button>
     <button class="scaffold-button scaffold-button-confirm"
       onmousedown="${buttonCallbackStrings.Confirm.down}"
       ontouchstart="${buttonCallbackStrings.Confirm.down}"
       onmouseup="${buttonCallbackStrings.Confirm.up}"
       ontouchend="${buttonCallbackStrings.Confirm.up}"
-      >A</button>
+      >Space</button>
   </div>
   <div class="scaffold-flex-row-center">
     <button class="scaffold-button scaffold-button-cancel"
@@ -136,7 +136,7 @@ const controlsButtonsAbShift = `
       ontouchstart="${buttonCallbackStrings.Cancel.down}"
       onmouseup="${buttonCallbackStrings.Cancel.up}"
       ontouchend="${buttonCallbackStrings.Cancel.up}"
-      >B</button>
+      >Z</button>
   </div>
 </div>
 `;

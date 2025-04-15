@@ -44,24 +44,24 @@
       const children = [
         Lib.createTopBarButton({
           id: 'cancel',
-          svgSrc1: '../../../assets/cancel.svg',
+          svgSrc1: 'assets/cancel.svg',
           onClick: function () { },
           type: 'cancel',
         }),
         Lib.createTopBarButton({
           id: 'toggle-sound',
-          svgSrc1: '../../../assets/sound_on.svg',
-          svgSrc2: '../../../assets/sound_off.svg',
+          svgSrc1: 'assets/sound_on.svg',
+          svgSrc2: 'assets/sound_off.svg',
           onClick: Lib.toggleSound.bind(Lib),
         }),
         Lib.createTopBarButton({
           id: 'toggle-controls',
-          svgSrc1: '../../../assets/controls.svg',
+          svgSrc1: 'assets/controls.svg',
           onClick: Lib.toggleButtons.bind(Lib),
         }),
         Lib.createTopBarButton({
           id: 'show-help',
-          svgSrc1: '../../../assets/help.svg',
+          svgSrc1: 'assets/help.svg',
           onClick: Lib.showHelp.bind(Lib, {
             en: 'instructions/instructions.en.html',
           }),

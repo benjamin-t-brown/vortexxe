@@ -5,13 +5,13 @@ struct SDL_Renderer;
 struct SDL_Texture;
 struct Mix_Chunk;
 
-// #ifdef __EMSCRIPTEN__
+#ifdef __EMSCRIPTEN__
 typedef struct _TTF_Font TTF_Font;
 typedef struct _Mix_Music Mix_Music;
-// #else
-// struct TTF_Font;
-// struct Mix_Music;
-// #endif
+#else
+struct TTF_Font;
+struct Mix_Music;
+#endif
 
 typedef struct _SDL_Joystick SDL_Joystick;
 

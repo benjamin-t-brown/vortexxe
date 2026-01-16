@@ -17,6 +17,7 @@
 #include <ostream>
 #include <stdexcept>
 #include <utility>
+#include <cstdint>
 #if defined(_LIBCPP_VERSION)
 #include <cstring> // for memcpy()
 #include <cstdlib> // for strtod()

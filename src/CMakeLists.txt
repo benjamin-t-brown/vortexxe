@@ -16,7 +16,7 @@ if(EMSCRIPTEN_BUILD)
   # These emscripten flags match your EMCC_LIBS_CLIENT and EMCC_EXPORTED settings.
   add_compile_options(-Oz -flto -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s USE_SDL_MIXER=2 
                       -s SDL2_IMAGE_FORMATS='["png"]' -s USE_SDL_TTF=2 -s ALLOW_MEMORY_GROWTH=1 
-                      -s SAFE_HEAP=0 -s DEMANGLE_SUPPORT=1 -s ASSERTIONS=1
+                      -s SAFE_HEAP=0 -s ASSERTIONS=1
                       -s INITIAL_MEMORY=326565888 -s ENVIRONMENT=web -s JS_MATH=0)
   add_link_options(-s EXPORTED_FUNCTIONS='["_main","_enableSound","_disableSound","_setVolume","_setKeyDown","_setKeyUp","_setKeyStatus"]'
                    -s EXPORTED_RUNTIME_METHODS='["ccall"]')

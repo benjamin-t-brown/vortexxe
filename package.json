@@ -1,0 +1,18 @@
+{
+  "name": "vortexxe",
+  "version": "1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn && yarn clean && (cd src && make clean && make js) && yarn mv",
+    "build:dev": "yarn build",
+    "mv": "mkdirp dist && cp -rv web/* dist/",
+    "compile-commands": "cd src && compiledb make all && mv compile_commands.json ..",
+    "clean": "rm -rf dist",
+    "dist": "http-server dist -p 8080 -c-1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "mkdirp": "^3.0.1"
+  }
+}

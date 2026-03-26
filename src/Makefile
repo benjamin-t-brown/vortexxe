@@ -97,8 +97,8 @@ endif
 ifeq ($(OS),Windows_NT)
 	LIBS=-mconsole -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
 # If you get an 'lld error', remove the -fuse-ld=lld flag from the LINK_FLAGS variable
-# NOTE it will likely link much slower on Windows.
-	LINK_FLAGS+=-fuse-ld=lld 
+# NOTE it may link much slower on Windows.
+# LINK_FLAGS+=-fuse-ld=lld 
 else
 	UNAME_S=$(shell uname -s)
 	ifeq ($(UNAME_S),Darwin)

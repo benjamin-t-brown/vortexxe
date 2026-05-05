@@ -83,7 +83,7 @@ int main(int argc, char* argv[]) {
     logger::info("Start loop");
     game.start();
     window.startRenderLoop([&]() {
-      window.setBackgroundColor({10, 10, 10});
+      window.setBackgroundColor({70, 70, 70});
       window.setCurrentFont("default", 18);
 
 #ifndef __EMSCRIPTEN__

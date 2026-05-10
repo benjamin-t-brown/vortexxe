@@ -47,6 +47,12 @@ window.handleRotAxisDirectionClick = elem => {
   }
 };
 
+window.handleRotationPauseClick = elem => {
+  if (app) {
+    app.rotationPaused = elem.checked;
+  }
+};
+
 window.handleHideSpritesheetClick = () => {
   if (app) {
     app.animation = null;
@@ -87,6 +93,7 @@ class App {
     );
     this.rotAxis = 'y';
     this.rotReverse = false;
+    this.rotationPaused = false;
 
     this.sprites = null;
     this.spriteScale = 1;
@@ -389,7 +396,7 @@ class App {
 
         this.renderer.render(this.scene, this.camera);
 
-        if (this.pivot) {
+        if (this.pivot && !this.rotationPaused) {
           this.pivot.rotation[this.rotAxis] +=
             (this.rotReverse ? 1 : -1) * 0.02 * frameMult;
         }

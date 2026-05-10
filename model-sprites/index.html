@@ -50,11 +50,15 @@
       <h4>Model Controls</h4>
       <div>
         <label for="plane">Show Plane</label>
-        <input name="plane" type="checkbox" onclick="handleShowPlaneClick(this)"></input>
+        <input id="plane" name="plane" type="checkbox" onchange="handleShowPlaneClick(this)"></input>
       </div>
       <div>
         <label for="rot-reverse">Rot. Reverse</label>
-        <input name="rot-reverse" type="checkbox" onclick="handleRotAxisDirectionClick(this)"></input>
+        <input id="rot-reverse" name="rot-reverse" type="checkbox" onchange="handleRotAxisDirectionClick(this)"></input>
+      </div>
+      <div>
+        <label for="pause-rotation">Pause rotation</label>
+        <input id="pause-rotation" name="pause-rotation" type="checkbox" onchange="handleRotationPauseClick(this)"></input>
       </div>
       <div>
         <label for="rot-axis">Rot. Axis</label>
